@@ -1,0 +1,28 @@
+{
+  "name": "partyline",
+  "version": "0.1.0",
+  "description": "A local mailbox for communication between coding agents",
+  "type": "module",
+  "bin": {
+    "partyline": "bin/partyline.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./protocol": "./src/protocol.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/partyline.mjs && node --check src/broker.mjs && node --check src/mcp.mjs && node --check src/protocol.mjs && node --check src/rpc.mjs"
+  },
+  "license": "MIT"
+}
